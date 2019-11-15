@@ -1,0 +1,113 @@
+ <style>
+
+ 	*{
+ 		transition: 1s;
+ 	}
+
+ 	.lista-menu ul{
+ 		background-color: rgba(0,0,0,0.1)
+ 	}
+
+ 	.visible{ display: block; }
+
+ 	span + ul{ display: none; }
+ 	
+ </style>
+
+
+ <ul class="lista-menu">
+
+ 	<li>
+ 		<span>Abrir</span>
+ 		<ul>
+ 			<li>op 1</li>
+ 			<li>op 2</li>
+ 			<li>
+ 				<span>Abrir</span>
+ 				<ul>
+ 					<li>
+ 						<span>Abrir</span>
+ 						<ul>
+ 							<li>op 1</li>
+ 							<li>op 2</li>
+ 							<li>op 3</li>
+ 							<li>op 4</li>
+ 						</ul>
+ 					</li>
+ 					<li>op 2</li>
+ 					<li>op 3</li>
+ 					<li>op 4</li>
+ 				</ul>
+ 			</li>
+ 			<li>op 4</li>
+ 		</ul>
+ 	</li>
+ 	<li>op 1</li>
+ 	<li>op 2</li>
+ 	<li>
+ 		<span>Abrir</span>
+ 		<ul>
+ 			<li>op 1</li>
+ 			<li>op 2</li>
+ 			<li>op 3</li>
+ 			<li>op 4</li>
+ 		</ul>
+ 	</li>
+ </ul>
+
+ <hr>
+
+ <ul class="lista-menu">
+ 	<li>op 1</li>
+ 	<li>
+ 		<span>Abrir</span>
+ 		<ul>
+ 			<li>op 1</li>
+ 			<li>op 2</li>
+ 			<li>
+ 				<span>Abrir</span>
+ 				<ul>
+ 					<li>
+ 						<span>Abrir</span>
+ 						<ul>
+ 							<li>op 1</li>
+ 							<li>op 2</li>
+ 							<li>op 3</li>
+ 							<li>op 4</li>
+ 						</ul>
+ 					</li>
+ 					<li>op 2</li>
+ 					<li>op 3</li>
+ 					<li>op 4</li>
+ 				</ul>
+ 			</li>
+ 			<li>op 4</li>
+ 		</ul>
+ 	</li>
+ 	<li>op 3</li>
+ 	<li>
+ 		<span>Abrir</span>
+ 		<ul>
+ 			<li>op 1</li>
+ 			<li>op 2</li>
+ 			<li>op 3</li>
+ 			<li>op 4</li>
+ 		</ul>
+ 	</li>
+ </ul>
+
+
+
+
+ <script>
+
+ 	listaMenuSpan = document.querySelectorAll(".lista-menu span");
+
+ 	for(i in listaMenuSpan){
+ 		listaMenuSpan[i].onclick= e =>{
+			//e.target this
+			e.target.parentElement.querySelector("ul").classList.toggle("visible")
+		}
+	}
+
+</script>
